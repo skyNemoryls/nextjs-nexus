@@ -463,6 +463,10 @@ export interface NexusGenObjects {
     message: string // String!
     success: boolean // Boolean!
   }
+  Test: {
+    // root type
+    id?: string | null // ID
+  }
   User: User
 }
 
@@ -512,6 +516,7 @@ export interface NexusGenFieldTypes {
     files: NexusGenRootTypes['File'][] // [File!]!
     filesCount: number // Int!
     me: NexusGenRootTypes['User'] | null // User
+    tests: number[] // [Int!]!
     user: NexusGenRootTypes['User'] | null // User
     users: NexusGenRootTypes['User'][] // [User!]!
     usersCount: number // Int!
@@ -532,6 +537,10 @@ export interface NexusGenFieldTypes {
     errors: NexusGenRootTypes['RequestError'][] // [RequestError!]!
     message: string // String!
     success: boolean // Boolean!
+  }
+  Test: {
+    // field return type
+    id: string | null // ID
   }
   User: {
     // field return type
@@ -584,6 +593,7 @@ export interface NexusGenFieldTypeNames {
     files: 'File'
     filesCount: 'Int'
     me: 'User'
+    tests: 'Int'
     user: 'User'
     users: 'User'
     usersCount: 'Int'
@@ -604,6 +614,10 @@ export interface NexusGenFieldTypeNames {
     errors: 'RequestError'
     message: 'String'
     success: 'Boolean'
+  }
+  Test: {
+    // field return type name
+    id: 'ID'
   }
   User: {
     // field return type name
