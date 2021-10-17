@@ -345,6 +345,7 @@ export interface Query {
   /** Количество файлов */
   filesCount: Scalars['Int'];
   me?: Maybe<User>;
+  tests: Array<Scalars['Int']>;
   /** Пользователь */
   user?: Maybe<User>;
   /** Список пользователей */
@@ -480,6 +481,12 @@ export interface StringNullableFilter {
   not?: Maybe<NestedStringNullableFilter>;
   notIn?: Maybe<Array<Scalars['String']>>;
   startsWith?: Maybe<Scalars['String']>;
+}
+
+/** Somde test object */
+export interface Test {
+  __typename?: 'Test';
+  id?: Maybe<Scalars['ID']>;
 }
 
 export interface TokenListRelationFilter {

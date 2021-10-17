@@ -358,6 +358,7 @@ type Query {
   """
   filesCount(where: FileWhereInput): Int!
   me: User
+  tests: [Int!]!
 
   """
   Пользователь
@@ -474,6 +475,13 @@ input StringNullableFilter {
   not: NestedStringNullableFilter
   notIn: [String!]
   startsWith: String
+}
+
+"""
+Somde test object
+"""
+type Test {
+  id: ID
 }
 
 input TokenListRelationFilter {
